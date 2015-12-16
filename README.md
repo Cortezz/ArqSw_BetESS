@@ -13,3 +13,7 @@ The assignment was divided into four parts:
   
   4 -  The punter can search his bet history using filters. The filters must allow conjugation of logical expression and have to be created during runtime.
       Implemented with the Criteria Design Pattern.
+
+
+
+Class Diagram of the last version: https://goo.gl/nJce5l
