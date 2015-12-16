@@ -1,0 +1,5 @@
+c:\users\work\documents\visual studio 2015\Projects\BetESS\BetESS\bin\Debug\BetESS.exe.config
+c:\users\work\documents\visual studio 2015\Projects\BetESS\BetESS\bin\Debug\BetESS.exe
+c:\users\work\documents\visual studio 2015\Projects\BetESS\BetESS\bin\Debug\BetESS.pdb
+c:\users\work\documents\visual studio 2015\Projects\BetESS\BetESS\obj\Debug\BetESS.exe
+c:\users\work\documents\visual studio 2015\Projects\BetESS\BetESS\obj\Debug\BetESS.pdb

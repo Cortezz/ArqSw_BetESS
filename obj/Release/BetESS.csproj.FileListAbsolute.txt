@@ -1,0 +1,14 @@
+C:\Users\Work\Documents\Visual Studio 2015\Projects\BetESS\BetESS\bin\Release\BetESS.exe.config
+C:\Users\Work\Documents\Visual Studio 2015\Projects\BetESS\BetESS\bin\Release\BetESS.XML
+C:\Users\Work\Documents\Visual Studio 2015\Projects\BetESS\BetESS\bin\Release\BetESS.exe
+C:\Users\Work\Documents\Visual Studio 2015\Projects\BetESS\BetESS\bin\Release\BetESS.pdb
+C:\Users\Work\Documents\Visual Studio 2015\Projects\BetESS\BetESS\obj\Release\BetESS.csprojResolveAssemblyReference.cache
+C:\Users\Work\Documents\Visual Studio 2015\Projects\BetESS\BetESS\obj\Release\BetESS.exe
+C:\Users\Work\Documents\Visual Studio 2015\Projects\BetESS\BetESS\obj\Release\BetESS.pdb
+C:\Users\Cortez\Documents\Visual Studio 2015\Projects\BetESS\BetESS\bin\Release\BetESS.exe.config
+C:\Users\Cortez\Documents\Visual Studio 2015\Projects\BetESS\BetESS\bin\Release\BetESS.XML
+C:\Users\Cortez\Documents\Visual Studio 2015\Projects\BetESS\BetESS\bin\Release\BetESS.exe
+C:\Users\Cortez\Documents\Visual Studio 2015\Projects\BetESS\BetESS\bin\Release\BetESS.pdb
+C:\Users\Cortez\Documents\Visual Studio 2015\Projects\BetESS\BetESS\obj\Release\BetESS.csprojResolveAssemblyReference.cache
+C:\Users\Cortez\Documents\Visual Studio 2015\Projects\BetESS\BetESS\obj\Release\BetESS.exe
+C:\Users\Cortez\Documents\Visual Studio 2015\Projects\BetESS\BetESS\obj\Release\BetESS.pdb

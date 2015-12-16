@@ -1,0 +1,796 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BetESS</name>
+    </assembly>
+    <members>
+        <member name="M:BetESS.Admin.#ctor">
+            <summary>
+            Empty Constructor.
+            </summary>
+        </member>
+        <member name="M:BetESS.Admin.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Param Constructor.
+            </summary>
+            <param name="name">Name of the admin.</param>
+            <param name="email">Email of the admin.</param>
+            <param name="password">Password of the admin.</param>
+        </member>
+        <member name="M:BetESS.Admin.#ctor(BetESS.Admin)">
+            <summary>
+            Copy Constructor.
+            </summary>
+            <param name="a">Admin to be copied.</param>
+        </member>
+        <member name="M:BetESS.Admin.ToString">
+            ToString, Equals and Clone*
+        </member>
+        <member name="M:BetESS.Bookie.#ctor">
+            <summary>
+            Empty constructor.
+            </summary>
+        </member>
+        <member name="M:BetESS.Bookie.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Param constructor.
+            </summary>
+            <param name="name">Name of the bookie.</param>
+            <param name="email">E-mail of the bookie.</param>
+            <param name="pwd">Password of the bookie.</param>
+        </member>
+        <member name="M:BetESS.Bookie.#ctor(BetESS.Bookie)">
+            <sumary>
+            Copy Constructor.
+            </sumary>    
+            <param name="b">Bookie to be copied.</param>
+        </member>
+        <member name="M:BetESS.Bookie.SubscribeTo(System.Int32)">
+            <summary>
+            Subscribes a bookie to a certain event
+            </summary>
+            <param name="e">Event which the bookie will subscribe to.</param>
+        </member>
+        <member name="M:BetESS.Bookie.UnsubscribeTo(System.Int32)">
+            <summary>
+            Removes an event from the bookie's subcribed events list.
+            </summary>
+            <param name="eventID">Event to be removed.</param>
+        </member>
+        <member name="M:BetESS.Bookie.Update(System.String)">
+            <summary>
+            Update method from the Observer Interface.
+            Pushes a notification into the bookie's notification list.
+            </summary>
+            <param name="s">Notification to be pushed.</param>
+        </member>
+        <member name="M:BetESS.Bookie.Clone">
+            Equals, ToString and Clone*
+        </member>
+        <member name="M:BetESS.User.#ctor">
+            <summary>
+            Empty Constructor.
+            </summary>
+        </member>
+        <member name="M:BetESS.User.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Param Constructor.
+            </summary>
+            <param name="name">Name of the user.</param>
+            <param name="email">Email of the user.</param>
+            <param name="pwd">Password of the user.</param>
+        </member>
+        <member name="M:BetESS.User.#ctor(BetESS.User)">
+            <summary>
+            Copy Constructor.
+            </summary>
+            <param name="p">user to be copied from.</param>
+        </member>
+        <member name="M:BetESS.User.PushNotification(System.String)">
+            -------------- NOTIFICATIONS -------------------- *
+            <summary>
+            Adds a notification into the notification list.
+            <param name="s">Notification to be added.</param>
+            </summary>
+        </member>
+        <member name="M:BetESS.User.AmountOfNotification">
+            <summary>
+            Returns the number of notifications from a user.
+            </summary>
+            <returns>Number of notifications a user has.</returns>
+        </member>
+        <member name="M:BetESS.User.RemoveNotifications">
+            <summary>
+            Removes all notifications from a user.
+            </summary>
+        </member>
+        <member name="M:BetESS.User.NotificationList">
+            <summary>
+            Returns all notifications in formatted string.
+            </summary>
+            <returns>A string which represents all notifications.</returns>
+        </member>
+        <member name="T:BetESS.Program">
+            <summary>
+            Main Application Class. 
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.Register(System.String)">
+            ------------ LOGIN MENU METHODS ---------------- *
+            <summary>
+            Method which in which user registration takes place. If the e-mail is already on the system, it notifies so and the 
+            registration won't take place.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.Login(System.String)">
+            <summary>
+            Method which handles the login. It deals with two exceptions:
+            i) Wrong key-value info (e-mail->password)
+            ii) Non-existant e-mail
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.MainApp(System.String)">
+            -------------- MAIN USER MENU METHODS ------------------------ *
+            
+            <summary>Exectues the Main User Menu. Available options are:
+             1 - List of Events
+             2 - History of Bets
+             3 - Place a Bet
+             4 - Available Coins
+             5 - Insert Coins
+             </summary>
+        </member>
+        <member name="M:BetESS.Program.ListOfEvents">
+            <summary>
+            Prints the list of an user's events.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.HistoryOfBets(System.String)">
+            <summary>
+            Lets the user decide in which way he wants his bet history to be showed. The options are as follows:
+            1 - All bets
+            2 - Filter.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.FilterBetHistory(System.String)">
+             <summary>
+             Browses through the bet history with the following filters:
+             1 - Open bets
+             2 - Closed bets
+             3 - More coins than a certain amount
+             4 - Less coins than a certain amount
+            </summary>
+             <param name="UserEmail"></param>
+        </member>
+        <member name="M:BetESS.Program.PlaceBet(System.String)">
+            <summary>
+            This method will handle the bets registration. 
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.AvailableCoins(System.String)">
+            <summary>
+            Shows how many coins a user has, given his e-mail.
+            </summary>
+            <param name="UserEmail">E-mail of the user.</param>
+        </member>
+        <member name="M:BetESS.Program.InsertCoins(System.String)">
+            <summary>
+            Inserts a specified amount of coins in the user's account.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.AdminApp">
+            ---------------- MAIN ADMIN MENU METHODS ----------------------------- *
+            
+            <summary>Executes the main admin menu. Available options are:
+             1 - Determine Outcome of an Event
+             </summary>
+        </member>
+        <member name="M:BetESS.Program.DetermineOutcome">
+            <summary>
+            Finishes an event (by registering its outcome), closes every bet associated with it
+             and sends a notification to everyone who bet or subscribed to that particular event.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.BookieApp(System.String)">
+            <summary>
+            Executes the bookie menu. Available options are:
+            1 - Insert an Event
+            2 - Change Odds of an Event
+            3 - Subscribe to an Event
+            4 - List of Subscribed Events
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.ShowSportsMenu(System.String)">
+            <summary>
+            Method which will display every available sport. The admin will only be able to place events related to these sports.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.InsertNormalEvent(System.String,System.String)">
+            <summary>
+            Inserts a normal event (possible outcomes are victory, draw and loss).
+            </summary>
+            <param name="sportname">Name of the sport</param>
+            <param name="BookieEmail">E-mail of the bookie.</param>
+        </member>
+        <member name="M:BetESS.Program.ChangeOdds(System.String)">
+            <summary>
+            Changes the odds of a certain event and notifies every bookie who subscribed to it.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.SubscribeToEvent(System.String)">
+            <summary>
+            Method which handles the subscription of an event by a bookie.
+            In other words, it subscribes the bookie to a certain event and adds that same event into the bookie's subscribed events.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.ListOfSubscribedEvents(System.String)">
+            <summary>
+            Prints the list of all subscribed events from a certain bookie.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.LoadComponents">
+            <summary>
+            Both the main menu and the methods are created here.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.Initialize">
+            <summary>
+            Sets the event counter (responsible to tag the events) to 1. Inserts the available sports into the its list.
+            </summary>
+        </member>
+        <member name="M:BetESS.Program.LoadMenus">
+            <summary>
+            Creates the several static menus used throughout the interface.
+            </summary>
+        </member>
+        <member name="T:BetESS.System">
+            <summary>
+            Class that acts as the facade.
+            </summary>
+        </member>
+        <member name="M:BetESS.System.#ctor">
+            <summary>
+            Empty Constructor.
+            </summary>
+        </member>
+        <member name="M:BetESS.System.ValidateEmail(System.String)">
+            --------- USER ------------ *
+            <summary>
+            Checks whether a certain e-mail is already in the system or not.
+            </summary>
+            <param name="email">E-mail of the user.</param>
+            <returns>True if the e-mail's not in the system, false otherwise.</returns>
+        </member>
+        <member name="M:BetESS.System.ListOfUsers">
+            <summary>
+            Returns a string with all users in it.
+            </summary>
+            <returns>String which represents the users list.</returns>
+        </member>
+        <member name="M:BetESS.System.CheckCredentials(System.String,System.String)">
+            <summary>
+            Checks if some user's credentials are correct.
+            </summary>
+            <param name="email">User's e-mail.</param>
+            <param name="pwd">User's password.</param>
+            <returns>True if his e-mail->password match is correct, false otherwise.</returns>
+        </member>
+        <member name="M:BetESS.System.AmountOfNotificationsFrom(System.String)">
+            -------------------- NOTIFICATIONS ------------- *
+            <summary>
+            Returns the amount of notifications of a certain user, given his e-mail.
+            </summary>
+            <param name="email">User's e-mail.</param>
+            <returns>Number of notifications a user has.</returns>      
+        </member>
+        <member name="M:BetESS.System.NotificationListFrom(System.String)">
+            <summary>
+            Gets all the notifications from a certain user, specified by his e-mail.
+            </summary>
+            <param name="email">User's e-mail.</param>
+            <returns>String which represents the notifications.</returns>
+        </member>
+        <member name="M:BetESS.System.RemoveNotificationsFrom(System.String)">
+            <summary>
+            Removes the notifications from a certain user, specified by his e-mail.
+            </summary>
+            <param name="email">E-mail of the user.</param>
+        </member>
+        <member name="M:BetESS.System.AddPunter(System.String,System.String,System.String)">
+            ------------------- PUNTERS --------------------- *
+            <summary>
+            Adds a punter to the system.
+            </summary>
+            <param name="name">Punter's name.</param>
+            <param name="email">Punter's e-mail.</param>
+            <param name="pwd">Punter's password.</param>
+        </member>
+        <member name="M:BetESS.System.BetHistoryFrom(System.String)">
+            <summary>
+            Returns the bet history in string representation from a punter, given his e-mail.
+            </summary>
+            <param name="email">E-mail of the punter.</param>
+            <returns>String representation of the bets made by a certain punter.</returns>
+        </member>
+        <member name="M:BetESS.System.GetBetsFrom(System.String)">
+            <summary>
+            Returns all bets from a specific punter, given his e-mail.
+            </summary>
+            <param name="email">E-mail of the punter.</param>
+            <returns>A dictionary whose key is the bet ID and value is the bet itself. These bets are all the bets a certain punter 
+            has made.</returns>
+        </member>
+        <member name="M:BetESS.System.GetBetESSCoinsFrom(System.String)">
+            <summary>
+            Returns how many coins a punter has, given his e-mail.
+            </summary>
+            <param name="email">E-mail of the punter.</param>
+            <returns>Amount of coins the specified punter has.</returns>
+        </member>
+        <member name="M:BetESS.System.AddOpenBetTo(System.Int32,System.String)">
+            <summary>
+            Adds a bet to a certain punter, given his e-mail.
+            </summary>
+            <param name="betID">ID of the bet.</param>
+            <param name="email">Email of the punter.</param>
+        </member>
+        <member name="M:BetESS.System.DebitCoinsFrom(System.String,System.Single)">
+            <summary>
+            Debits coins from a certian punter, given his e-mail.
+            </summary>
+            <param name="email">Email of the punter whose coins are to be debited.</param>
+            <param name="coins">Coins to be debited.</param>
+        </member>
+        <member name="M:BetESS.System.CreditCoinsTo(System.String,System.Single)">
+            <summary>
+            Credits coins from a certain punter, given his e-mail.
+            </summary>
+            <param name="email">Email of the punter whose coins are to be credited.</param>
+            <param name="coins">Coins to be credited.</param>
+        </member>
+        <member name="M:BetESS.System.AddBookie(System.String,System.String,System.String)">
+            ------------------------ BOOKIES ---------------------------------- *
+            <summary>
+            Adds a bookie to the system.
+            </summary>
+            <param name="name">Name of the bookie.</param>
+            <param name="email">Email of the bookie.</param>
+            <param name="pwd">Password of the bookie.</param>
+        </member>
+        <member name="M:BetESS.System.SubscribeBookieToEvent(Sports.Event,System.String)">
+            <summary>
+            Adds a bookie to a certain event.
+            </summary>
+            <param name="e">Event.</param>
+            <param name="bookieEmail">Email of a bookie.</param>
+        </member>
+        <member name="M:BetESS.System.AddSubscribedEventTo(System.Int32,System.String)">
+            <summary>
+            Adds a subscrived event to a bookie.
+            </summary>
+            <param name="e">Event to be subscribed.</param>
+            <param name="email">Email of the bookie.</param>
+        </member>
+        <member name="M:BetESS.System.GetSubscribedEventsFrom(System.String)">
+            <summary>
+            Returns all subscribed event IDs from a certain bookie, given his e-mail.
+            </summary>
+            <param name="bookieEmail">E-mail of the bookie.</param>
+            <returns>List with all event IDs.</returns>
+        </member>
+        <member name="M:BetESS.System.AddAdmin(System.String,System.String,System.String)">
+            <summary>
+            Adds an admin into the user's list.
+            </summary>
+            <param name="name">Name of the admin.</param>
+            <param name="email">Email of the admin.</param>
+            <param name="pwd">Password of the admin.</param>
+        </member>
+        <member name="M:BetESS.System.AddSport(System.String,Sports.Sport)">
+            <summary>
+            Adds a sport into the system.
+            </summary>
+            <param name="name">Name of the sport.</param>
+            <param name="s">Sport to be added.</param>
+        </member>
+        <member name="M:BetESS.System.AddEvent(System.String,System.Int32,Sports.Event,System.String)">
+            <summary>
+            Adds an event to the system.
+            </summary>
+            <param name="name">Name of the sport.</param>
+            <param name="id">Id of the event.</param>
+            <param name="e">The event's instance (object-wise).</param>
+        </member>
+        <member name="M:BetESS.System.GetAllEvents">
+            <summary>
+            The events are mapped according to the sport they represent. This method returns a single collection with all events in it.
+            </summary>
+            <returns>A sorted dictionary with the following structure: Key - SportName, Value - Dictionary(EventID, Event).</returns>
+        </member>
+        <member name="M:BetESS.System.DisplayEvents(System.Collections.Generic.SortedDictionary{System.String,System.Collections.Generic.Dictionary{System.Int32,Sports.Event}})">
+            <summary>
+            Given the collection assembled by the method @getAllEvents, prints a list of every event.
+            </summary>
+            <param name="ev">The result of @getAllEvents.</param>
+            <returns>String which represents a list with every event.</returns>
+        </member>
+        <member name="M:BetESS.System.DisplayOddsFrom(Sports.Event)">
+            <summary>
+            Returns the odds of all outcomes from a certain event.
+            </summary>
+            <param name="e">Event from which the odds are to be gotten.</param>
+            <returns>A List of tuples(representation of the outcome(e.g. 1, X, 2, etc), and its odd).</returns>
+        </member>
+        <member name="M:BetESS.System.ChangeOddsTo(Sports.Event,System.Collections.Generic.List{System.Double})">
+            <summary>
+            Changes the odds of an event.
+            </summary>
+            <param name="e">Events whose odds are to be changed.</param>
+            <param name="l">New odds.</param>
+        </member>
+        <member name="M:BetESS.System.MapOfAllEvents(System.Collections.Generic.SortedDictionary{System.String,System.Collections.Generic.Dictionary{System.Int32,Sports.Event}})">
+            <summary>
+            Returns a map with every existing event, mapped according to its ID.
+            </summary>
+            <param name="sports">All events divided into sports.</param>
+            <returns>A Dictionary whose key is the event ID and the value the event itself.</returns>
+        </member>
+        <member name="M:BetESS.System.MapOfAllEvents">
+            <summary>
+            Returns a map with every existing event, mapped according to its ID.
+            </summary>
+            <returns>A Dictionary whose key is the event ID and the value the event itself.</returns>
+        </member>
+        <member name="M:BetESS.System.RemoveEvent(Sports.Event)">
+            <summary>
+            Auxiliar method called by @CloseBet in order to remove an event from the system.
+            </summary>
+            <param name="e">Event to be removed.</param>
+        </member>
+        <member name="M:BetESS.System.AddBet(Sports.Event,System.Int32,System.String,System.Int32,System.Double,System.Single)">
+            ------------------- BETS ----------------- *
+            <summary>
+            Adds a bet: 
+            1 - Into the punter's open bet list.
+            2 - Into the event's bet list.
+            </summary>
+            <param name="e">Event related to the bet.</param>
+            <param name="betID">ID of the bet.</param>
+            <param name="better">E-mail of the better.</param>
+            <param name="option">Option chosen by the punter regarding this bet.</param>
+            <param name="odds">Odds for that particular choice.</param>
+            <param name="coins">Number of coins bet.</param>
+        </member>
+        <member name="M:BetESS.System.CloseEvent(Sports.Event,System.Int32)">
+            <summary>
+            Closes the bets of a specified event, notifies the punters which bet on that particular event and credit/debits into their account
+            based on the outcome.
+            </summary>
+            <param name="e">Event to be closed.</param>
+            <param name="outcome">Outcome of the event.</param>
+        </member>
+        <member name="M:BetESS.Punter.#ctor">
+            <summary>
+            Empty Constructor. 
+            </summary>
+        </member>
+        <member name="M:BetESS.Punter.#ctor(System.String,System.String,System.String,System.Single)">
+            <summary>
+            Param Constructor. 
+            </summary>
+            <param name="name">Name of the punter.</param>
+            <param name="email">Email of the punter.</param>
+            <param name="pwd">Password of the punter.</param>
+            <param name="coins">Coins the punter has.</param>
+        </member>
+        <member name="M:BetESS.Punter.CreditCoins(System.Single)">
+            ---------------- COINS -------------------------- *
+            <summary>
+            Credit coins into the punter's account.
+            </summary>
+            <param name="coins">Amount of coins to be credited.</param>
+        </member>
+        <member name="M:BetESS.Punter.DebitCoins(System.Single)">
+            <summary>
+            Debit coins from the punter's account.
+            </summary>
+            <param name="coins">Amount of coints debited from the account.</param>
+        </member>
+        <member name="M:BetESS.Punter.AddOpenBet(System.Int32)">
+            <summary>
+            Adds a bet to the punter's open bet list.
+            </summary>
+            <param name="betID">ID of the bet.</param>
+        </member>
+        <member name="M:BetESS.Punter.CloseOpenBet(System.Int32)">
+            <summary>
+            Removes a bet from the punter's open bet list and inserts the same bet into the closed bet list.
+            </summary>
+            <param name="betID">ID of the bet.</param>
+        </member>
+        <member name="M:BetESS.Punter.BetHistory">
+            <summary>
+            Display the history of all bets taken by the punter (both the open and closed ones).
+            </summary>
+            <returns>A structure which contains every bet, separated by its open status. The structure is as follows:
+            "Closed"|"Open" -> Dictionary (betId,betID).
+            A dictionary with keys and values being the same is used due to C#'s implemtantion of an HashSet not enabling to remove items.</returns>
+        </member>
+        <member name="M:Sports.Bet.#ctor(System.Int32)">
+            <summary>
+            Empty Constructor.
+            </summary>
+            <param name="id">Id of the bet.</param>
+        </member>
+        <member name="M:Sports.Bet.#ctor(System.Int32,System.String,System.String,System.Int32,System.Double,System.Single)">
+            <summary>
+            Param Constructor.
+            </summary>
+            <param name="bID">Bet ID.</param>
+            <param name="desc">Bet description.</param>
+            <param name="name">Name of the better.</param>
+            <param name="opt">Option chosen by the better.</param>
+            <param name="o">Odds.</param>
+            <param name="c">Coins bet.</param>
+        </member>
+        <member name="M:Sports.Bet.#ctor(Sports.Bet)">
+            <summary>
+            Copy Constructor.
+            </summary>
+            <param name="b">Bet to be copied.</param>
+        </member>
+        <member name="M:Sports.Bet.CloseBet(System.Boolean)">
+            <summary>
+            Closes a bet, defining whether or not the bet was won.
+            </summary>
+            <param name="wonBet">True if bet was won, false otherwise.</param>
+        </member>
+        <member name="M:Sports.Bet.Clone">
+            Equals, ToString, clone*
+        </member>
+        <member name="M:Sports.Event.#ctor">
+            <summary>
+            Empty Constructor.
+            </summary>
+        </member>
+        <member name="M:Sports.Event.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Param constructor. The outcome is -1 by default, which means the event is open.
+            </summary>
+            <param name="id">Id of the event.</param>
+            <param name="description">Event description.</param>
+            <param name="bookie">Name of the bookie which created the event.</param>
+        </member>
+        <member name="M:Sports.Event.#ctor(Sports.Event)">
+            <summary>
+            Copy Constructor.
+            </summary>
+            <param name="e">Event to be copied.</param>
+        </member>
+        <member name="M:Sports.Event.getDescription">
+            Getters and Setters*
+        </member>
+        <member name="M:Sports.Event.CloseEvent(System.Int32)">
+            <summary>
+            Closes an event by changing its outcome (from -1 to some other value).
+            </summary>
+            <param name="outcome">Outcome of the event.</param>
+        </member>
+        <member name="M:Sports.Event.AddSubscribedBookie(System.String)">
+            <summary>
+            Subscribes a bookie to this instance's event.
+            </summary>
+            <param name="subBookieEmail">Email of the bookie.</param>
+        </member>
+        <member name="M:Sports.Event.AddBet(System.Int32)">
+            <summary>
+            Adds a bet to this event.
+            </summary>
+            <param name="bID">ID of the bet.</param>
+        </member>
+        <member name="M:Sports.Event.Subscribe(BetESS.Observer)">
+            <summary>
+            Adds an observer to the observers list.
+            </summary>
+            <param name="o">Observer to be added.</param>
+        </member>
+        <member name="M:Sports.Event.Unsubscribe(BetESS.Observer)">
+            <summary>
+            Removes an observer from the observers list
+            </summary>
+            <param name="o">Observer to be removed.</param>
+        </member>
+        <member name="M:Sports.Event.NotifyObservers(Sports.ObservableEvents)">
+            <summary>
+            Notifies either the end of change observers or the odd change observers, depending on the Enum value passed as argument.
+            </summary>
+            <param name="obsEvs">Enumeration related to the event which triggered the notification.
+            Can be OddChange or EndOfEvent</param>
+        </member>
+        <member name="M:Sports.Event.Clone">
+            Clone, Equals, ToString and HashCode 
+        </member>
+        <member name="M:Sports.Event.DisplayOdds">
+            <summary>
+            Method which represents every available outcome and its odd into a SortedDictionary.
+            </summary>
+            <returns>Sorted Dictionary whose key is the outcome and the value is the odd.</returns>
+        </member>
+        <member name="M:Sports.Event.GetSpecificOdd(System.Int32)">
+            <summary>
+            Method which gives an odd to a certain outcome.
+            </summary>
+            <param name="opt">Outcome chosen.</param>
+            <returns>Odd of a certain specific outcome.</returns>
+        </member>
+        <member name="M:Sports.Event.ChangeOdds(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Changes the odds of an event.
+            Receives a list of doubles so it can be used by all sorts of events (subclasses, that is). 
+            Despite the fact there's only NormalEvent right now, this is a measure to achieve good levels of extensibility.
+            </summary>
+            <param name="list">List of doubles which represents the new odds.</param>
+        </member>
+        <member name="M:Sports.Football.#ctor">
+            <summary>
+            Empty Constructor.
+            </summary>
+        </member>
+        <member name="M:Sports.Football.#ctor(System.String)">
+            <summary>
+            Param constructor.
+            </summary>
+            <param name="name">Name of the sport.</param>
+        </member>
+        <member name="M:Sports.Football.#ctor(Sports.Football)">
+            <summary>
+            Copy constructor.
+            </summary>
+            <param name="f">Object to be copied from.</param>
+        </member>
+        <member name="M:Sports.Football.AddEvent(System.Int32,Sports.Event)">
+            <summary>
+            Adds a NormalEvent (1/X/2) related to Football. 
+            </summary>
+            <param name="id">Id of the event.</param>
+            <param name="e">Instance of an event.</param>
+        </member>
+        <member name="M:Sports.Football.Clone">
+            Equals, ToString, Clone *
+        </member>
+        <member name="M:Sports.NormalEvent.#ctor">
+            <summary>
+            Empty Constructor.
+            </summary>
+        </member>
+        <member name="M:Sports.NormalEvent.#ctor(System.Int32,System.String,System.String,System.Double,System.Double,System.Double)">
+            <summary>
+            Param Constructor.
+            </summary>
+            <param name="id">Id of the event.</param>
+            <param name="descr">Event description.</param>
+            <param name="bookie">Bookie which created the event.</param>
+            <param name="odd1">Odds for home win.</param>
+            <param name="odd2">Odds for away win.</param>
+            <param name="drawOdd">Odds for a draw.</param>
+        </member>
+        <member name="M:Sports.NormalEvent.#ctor(Sports.NormalEvent)">
+            <summary>
+            Copy Constructor.
+            </summary>
+            <param name="ne">NormalEvent to be copied from.</param>
+        </member>
+        <member name="M:Sports.NormalEvent.getOdd1">
+            Getters and Setters *
+        </member>
+        <member name="M:Sports.NormalEvent.Clone">
+            Equals, Clone, ToString*
+        </member>
+        <member name="M:Sports.NormalEvent.DisplayOdds">
+            <summary>
+            Returns a List with all of the odds of a Normal Event (1|X|2).
+            Specific implementation of DisplayOdds (Abstract method of Event) for a Normal Event.
+            The configuration used is as follows:
+            [0] - Home Win Odd
+            [1] - Draw Odd
+            [2] - Away Win
+            </summary>
+            <returns>A list of a tuple for every odd. In this case, it'll return a list of three tuples.</returns>
+        </member>
+        <member name="M:Sports.NormalEvent.GetSpecificOdd(System.Int32)">
+            <summary>
+            Returns the odd for a specific outcome of a NormalEvent (1/X/2).
+            </summary>
+            <param name="opt">Outcome (Note: Draw is represented by 0).</param>
+            <returns>Respective odd.</returns>
+        </member>
+        <member name="M:Sports.NormalEvent.ChangeOdds(System.Collections.Generic.List{System.Double})">
+            <summary>
+            When called upon in this subclass (NormalEvent) the list will contain the new odds for Home win, draw and away win, respectively.
+            </summary>
+            <param name="list">List which contains new odds.</param>
+        </member>
+        <member name="M:Sports.Sport.#ctor">
+            <summary>
+            Empty Constructor.
+            </summary>
+        </member>
+        <member name="M:Sports.Sport.#ctor(System.String)">
+            <summary>
+            Param Constructor.
+            </summary>
+            <param name="name">Name of the sport.</param>
+        </member>
+        <member name="M:Sports.Sport.#ctor(Sports.Sport)">
+            <summary>
+            Copy Constructor.
+            </summary>
+            <param name="s">Sport to be copied from.</param>
+        </member>
+        <member name="M:Sports.Sport.Clone">
+            Equals, ToString, Clone *
+        </member>
+        <member name="M:Sports.Sport.AddEvent(System.Int32,Sports.Event)">
+            <summary>
+            Adds an event into its list. 
+            This method is represented as an abstract one because each Sport Subclass may be associated with a different kind of event.
+            This means it is the role of those specific sports to insert whatever events they're associated with.
+            </summary>
+            <param name="id">Id of the event.</param>
+            <param name="e">Event ot be added.</param>
+        </member>
+        <member name="M:Sports.Sport.RemoveEvent(System.Int32)">
+            <summary>
+            Removes an event.
+            </summary>
+            <param name="id">ID of the event.</param>
+        </member>
+        <member name="T:Criteria.CriteriaOpenBet">
+            <summary>
+            Criteria to match bets that are still open.
+            </summary>
+        </member>
+        <member name="T:Criteria.CriteriaClosedBet">
+            <summary>
+            Criteria to match bets that are closed.
+            </summary>
+        </member>
+        <member name="T:Criteria.CriteriaMoreThanAmountOfCoins">
+            <summary>
+            Criteria to match bets with more than a certain amount of coins.
+            </summary>
+        </member>
+        <member name="T:Criteria.CriteriaLessThanAmountOfCoins">
+            <summary>
+            Criteria to match bets with less than a certain amount of coins.
+            </summary>
+        </member>
+        <member name="T:Criteria.CriteriaAnd">
+            <summary>
+            Receives to criteria and applies the AND logical expression to them.
+            </summary>
+        </member>
+        <member name="T:Criteria.CriteriaOr">
+            <summary>
+            Applies the OR logical expressions to two criteria.
+            </summary>
+        </member>
+        <member name="M:UI.Menu.#ctor(System.String[])">
+            <summary>
+            This is the only constructor of this class. It receives an array of strings and transforms it into a List.
+            </summary>
+            <param name="l"></param>
+        </member>
+        <member name="M:UI.Menu.ShowMenu">
+            <summary>
+            This method will print this instance's menu.
+            </summary>
+        </member>
+        <member name="M:UI.Menu.ExecuteMenu">
+            <summary>
+            Method which shows the menu (by calling @ShowMenu) and parses the user's option.
+            It checks if the option is between the possible range.
+            </summary>
+        </member>
+    </members>
+</doc>
