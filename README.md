@@ -1,4 +1,4 @@
-# Software Arquitectures
+# Software Architectures
 
 Assignment where the objective was to create a centralized sports betting system.
 The assignment was divided into four parts:
