@@ -1,6 +1,6 @@
 # Software Architectures
 
-### Mestrado Integrado em Engenharia Informática, 4º Ano 2015/216
+
 
 Assignment where the objective was to create a centralized sports betting system.
 The assignment was divided into four parts:
@@ -22,3 +22,6 @@ The project was written in C#.
 
 
 Class Diagram of the last version: https://goo.gl/nJce5l
+
+
+##### Mestrado Integrado em Engenharia Informática, 4º Ano 2015/216
