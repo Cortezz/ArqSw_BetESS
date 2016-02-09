@@ -11,7 +11,7 @@ The assignment was divided into four parts:
   3 - Bookies/Punters should be notified when odds from an event they're following change or when the event itself ends. 
   Those features should be implemented with the Observer Design Pattern.
   
-  4 -  The punter can search his bet history using filters. The filters must allow conjugation of logical expression and have to be created during runtime.
+  4 -  The punter can search his bet history using filters. The filters must allow conjugation of logical expressions and have to be created during runtime.
       Implemented with the Criteria Design Pattern.
 
 
