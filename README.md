@@ -1,4 +1,4 @@
-# Software Architectures 2015/16
+# Software Architectures
 
 
 
@@ -23,5 +23,6 @@ The project was written in C#.
 
 Class Diagram of the last version: https://goo.gl/nJce5l
 
+###### 2015/2016
 
 
