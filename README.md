@@ -1,4 +1,4 @@
-# Software Architectures
+# Software Architectures 2015/16
 
 
 
@@ -24,5 +24,4 @@ The project was written in C#.
 Class Diagram of the last version: https://goo.gl/nJce5l
 
 
-###### Mestrado Integrado em Engenharia Informática, 4º Ano 2015/216. 
-######Universidade do Minho
+
