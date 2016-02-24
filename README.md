@@ -21,7 +21,7 @@ The assignment was divided into four parts:
 The project was written in C#.
 
 
-Class Diagram of the last version: https://goo.gl/nJce5l
+Class Diagram of the [last version](https://goo.gl/nJce5l).
 
 ###### 2015/2016
 
